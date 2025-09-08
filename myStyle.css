@@ -1,0 +1,47 @@
+/*myStyle.css*/
+*{
+    margin: 5;
+    padding: 5  ;
+}
+body{
+    background-color: blanchedalmond;
+}
+/*header*/
+header{
+    font-size: larger;
+    font-family: 'Comic Neue', cursive;
+    text-align: center;
+    margin: 20px;   
+    color: lightblue;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px  1px 0 black,
+    1px  1px 0 black;
+}
+/*gallery*/
+ul{
+    list-style: none;
+}
+.gallery ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10 20;
+}
+@media(max-width: 768px){
+  .gallery ul {
+    grid-template-columns: 1fr; 
+  }
+}
+.gallery img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
